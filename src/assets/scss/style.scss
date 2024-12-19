@@ -21,26 +21,9 @@
 // глобальные стили
 @import './share.scss';
 
-body {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.5;
-}
-
-.promo-title {
-  .promo-title__intro {
-    font-weight: 700;
-  }
-
-  .promo-title__details {
-    font-weight: 100;
-    color: #999;
-  }
-}
-
 .header__inner {
   display: flex;
+  gap: 0 35px;
   min-height: 90px;
   padding: 13px 0;
   align-items: center;
@@ -51,15 +34,30 @@ body {
   }
 
   .logo {
+    display: flex;
+    align-items: center;
     width: 126px;
     height: 30px;
   }
 
+  .header__list-separator {
+    width: 4px;
+    height: 4px;
+    background: #fff;
+  }
+
   .menu {
     min-height: 64px;
-    padding: 20px 0 20px 20px;
     margin-left: auto;
     display: flex;
+
+    .menu__btn {
+      display: none;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
 
     .menu__list {
       display: flex;
@@ -70,23 +68,21 @@ body {
     }
   }
 
-  .urser-actions {
+  .urser-actions-list {
     min-height: 64px;
-    padding: 9px 0;
-    margin-left: 35px;
     display: flex;
     align-items: center;
     gap: 0 35px;
     list-style: none;
     font-size: 14px;
 
-    .urser-actions__separator {
-      width: 4px;
-      height: 4px;
-      background: #fff;
+    .urser-actions__link-sign-in {
+      img {
+        display: none;
+      }
     }
 
-    .urser-actions__item-started {
+    .urser-actions__link-started {
       border: 2px solid #fff;
       border-radius: 4px;
       padding: 11px 17px;
@@ -98,6 +94,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 120px 0;
   gap: 60px 0;
   color: #fff;
@@ -113,6 +110,7 @@ body {
     z-index: -1;
     width: 100vw;
     height: 582px;
+    object-fit: cover;
   }
 
   .top__content {
@@ -176,6 +174,80 @@ body {
         font-size: 14px;
         line-height: 1.84615;
         color: #999;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__inner {
+    gap: 0 20px;
+
+    .menu {
+      .menu__list {
+        gap: 0 30px;
+      }
+    }
+
+    .urser-actions-list {
+      gap: 0 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    gap: 0;
+
+    .logo {
+      margin-left: auto;
+      margin-right: 10%;
+    }
+
+    .header__list-separator {
+      display: none;
+    }
+
+    .menu {
+      order: -1;
+      margin-left: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+
+      .menu__btn {
+        display: flex;
+      }
+
+      .menu__list {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .header__inner {
+    .logo {
+      width: 106px;
+    }
+
+    .urser-actions-list {
+      gap: 0 15px;
+      font-size: 10px;
+
+      .urser-actions__link-sign-in {
+        p {
+          display: none;
+        }
+
+        img {
+          display: flex;
+        }
+      }
+
+      .urser-actions__link-started {
+        padding: 4px 10px;
       }
     }
   }
