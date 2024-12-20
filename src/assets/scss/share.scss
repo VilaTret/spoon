@@ -2,64 +2,64 @@
 @import './variables';
 
 body {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.5;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
 }
 
 .d-n {
-  display: none;
+    display: none;
 }
 
 .d-f {
-  display: flex;
+    display: flex;
 }
 
 .d-g {
-  display: grid;
+    display: grid;
 }
 
 .jc-sb {
-  justify-content: space-between;
+    justify-content: space-between;
 }
 
 .jc-c {
-  justify-content: center;
+    justify-content: center;
 }
 
 .ai-c {
-  align-items: center;
+    align-items: center;
 }
 
 .fd-c {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .fw-w {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .ta-c {
-  text-align: center;
+    text-align: center;
 }
 
 .ta-e {
-  text-align: end;
+    text-align: end;
 }
 
 .btn-icon {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 .promo-title {
-  .promo-title__intro {
-    font-weight: 700;
-  }
+    .promo-title__intro {
+        font-weight: 700;
+    }
 
-  .promo-title__details {
-    font-weight: 100;
-    color: #999;
-  }
+    .promo-title__details {
+        font-weight: 100;
+        color: #999;
+    }
 }
