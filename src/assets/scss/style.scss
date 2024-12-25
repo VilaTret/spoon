@@ -67,7 +67,6 @@
     min-height: 90px;
     padding: 13px 0;
     align-items: center;
-    color: #fff;
 
     a {
         color: #fff;
@@ -103,7 +102,6 @@
             display: flex;
             align-items: center;
             gap: 0 40px;
-            list-style: none;
             font-size: 14px;
         }
     }
@@ -113,7 +111,6 @@
         display: flex;
         align-items: center;
         gap: 0 35px;
-        list-style: none;
         font-size: 14px;
 
         .urser-actions__link-sign-in {
@@ -184,7 +181,7 @@
 }
 
 .promoting__inner {
-    margin: 120px 0;
+    padding: 120px 0;
 
     .promoting__promo-title {
         margin: 0 0 54px 10px;
@@ -215,6 +212,32 @@
                 line-height: 1.84615;
                 color: #999;
             }
+        }
+    }
+}
+
+.about__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px 0;
+    padding: 115px 205px;
+
+    .about__promo-title {
+        text-align: center;
+        padding: 0 58.25px 0 17.25px;
+    }
+
+    .about__list {
+        display: flex;
+        gap: 0 8px;
+        font-family: $second-family;
+        font-size: 11px;
+        line-height: 1.63636;
+        text-transform: uppercase;
+
+        a {
+            color: #5ab963;
         }
     }
 }
