@@ -219,7 +219,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@include breakpoint($tablet-bp) {
     .header__inner {
         gap: 0 20px;
 
@@ -235,7 +235,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@include breakpoint($small-tablet-bp) {
     .header__inner {
         gap: 0;
 
@@ -266,7 +266,7 @@
     }
 }
 
-@media (max-width: 425px) {
+@include breakpoint($mobile-bp) {
     .header__inner {
         .logo {
             width: 106px;
