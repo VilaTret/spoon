@@ -236,22 +236,20 @@
     gap: 6px 0;
     padding: 115px 205px;
 
+    a {
+        color: #5ab963;
+    }
+
     .about__promo-title {
         text-align: center;
         padding: 0 58.25px 0 17.25px;
     }
 
-    .about__list {
-        display: flex;
-        gap: 0 8px;
+    .about__link {
         font-family: $second-family;
         font-size: 11px;
         line-height: 1.63636;
         text-transform: uppercase;
-
-        a {
-            color: #5ab963;
-        }
     }
 }
 
