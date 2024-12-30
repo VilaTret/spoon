@@ -258,7 +258,7 @@
         gap: 90px 0;
 
         .main-blog__item {
-            margin-right: 230px;
+            max-width: 940px;
             display: flex;
             gap: 0 100px;
 
@@ -275,16 +275,15 @@
 
                 .main-blog__text {
                     font-family: $second-family;
-                    font-size: 13px;
-                    line-height: 1.84615;
+                    font-size: 14px;
+                    line-height: 1.71429;
                     color: #999;
                 }
             }
         }
 
         .main-blog__item:nth-child(2n) {
-            margin-right: 0;
-            margin-left: 230px;
+            margin-left: auto;
 
             .main-blog__content {
                 order: -1;
