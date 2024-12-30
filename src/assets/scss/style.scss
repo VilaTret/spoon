@@ -21,6 +21,8 @@
 // глобальные стили
 @import './share.scss';
 
+@import './node_modules/swiper/swiper-bundle';
+
 @font-face {
     font-family: 'Libre Franklin';
     src: url('./../fonts/LibreFranklin-Bold.woff2') format('woff2');
@@ -216,6 +218,39 @@
                 font-size: 14px;
                 line-height: 1.84615;
                 color: #999;
+            }
+        }
+    }
+}
+
+.illustration__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    .main-swiper {
+        .main-swiper-wrapper {
+            .main-swiper-slider {
+                height: 720px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #ddd;
+            }
+        }
+
+        .main-swiper-pagination {
+            .swiper-pagination-bullet {
+                margin: 0 10px 0 10px;
+                width: 6px;
+                height: 6px;
+                background-color: #fff;
+                opacity: 0.4;
+                border-radius: 0;
+            }
+
+            .swiper-pagination-bullet-active {
+                opacity: 1;
             }
         }
     }
