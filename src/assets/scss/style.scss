@@ -85,7 +85,7 @@
         color: #fff;
     }
 
-    .logo {
+    .header__logo {
         display: flex;
         align-items: center;
         width: 126px;
@@ -314,98 +314,6 @@
     }
 }
 
-@include breakpoint($tablet-bp) {
-    .section-separator {
-        .section-separator__item {
-            max-width: 768px;
-        }
-    }
-
-    .header__inner {
-        gap: 0 20px;
-
-        .menu {
-            .menu__list {
-                gap: 0 30px;
-            }
-        }
-
-        .urser-actions-list {
-            gap: 0 20px;
-        }
-    }
-}
-
-@include breakpoint($small-tablet-bp) {
-    .section-separator {
-        .section-separator__item {
-            max-width: 640px;
-        }
-    }
-
-    .header__inner {
-        gap: 0;
-
-        .logo {
-            margin-left: auto;
-            margin-right: 10%;
-        }
-
-        .header__list-separator {
-            display: none;
-        }
-
-        .menu {
-            order: -1;
-            margin-left: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-
-            .menu__btn {
-                display: flex;
-            }
-
-            .menu__list {
-                display: none;
-            }
-        }
-    }
-}
-
-@include breakpoint($mobile-bp) {
-    .section-separator {
-        .section-separator__item {
-            max-width: none;
-        }
-    }
-
-    .header__inner {
-        .logo {
-            width: 106px;
-        }
-
-        .urser-actions-list {
-            gap: 0 15px;
-            font-size: 10px;
-
-            .urser-actions__link-sign-in {
-                p {
-                    display: none;
-                }
-
-                img {
-                    display: flex;
-                }
-            }
-
-            .urser-actions__link-started {
-                padding: 4px 10px;
-            }
-        }
-    }
-}
-
 .party-on__inner {
     padding: 150px 0;
     display: flex;
@@ -445,5 +353,147 @@
     .party-on__link {
         font-weight: 700;
         margin-left: auto;
+    }
+}
+
+.footer {
+    background: #0a0e1a;
+
+    .footer__inner {
+        display: flex;
+        min-height: 399px;
+        padding: 120px 0 150px 0;
+        font-size: 12px;
+
+        a {
+            color: #fff;
+        }
+
+        .footer__branding {
+            flex-basis: 585px;
+
+            .footer__logo {
+                display: flex;
+                align-items: center;
+                width: 126px;
+                height: 30px;
+            }
+
+            .footer__copyright {
+                margin-top: 15px;
+                color: #666;
+            }
+        }
+
+        .footer__nav {
+            flex-basis: 585px;
+            display: flex;
+            gap: 0 50px;
+
+            .footer__services,
+            .footer__info,
+            .footer__legal {
+                display: flex;
+                flex-direction: column;
+                gap: 25px 0;
+            }
+
+            .footer__social {
+                display: flex;
+                gap: 0 18px;
+            }
+        }
+    }
+}
+
+@include breakpoint($tablet-bp) {
+    .section-separator {
+        .section-separator__item {
+            max-width: 768px;
+        }
+    }
+
+    .header__inner {
+        gap: 0 20px;
+
+        .menu {
+            .menu__list {
+                gap: 0 30px;
+            }
+        }
+
+        .urser-actions-list {
+            gap: 0 20px;
+        }
+    }
+}
+
+@include breakpoint($small-tablet-bp) {
+    .section-separator {
+        .section-separator__item {
+            max-width: 640px;
+        }
+    }
+
+    .header__inner {
+        gap: 0;
+
+        .header__logo {
+            margin-left: auto;
+            margin-right: 10%;
+        }
+
+        .header__list-separator {
+            display: none;
+        }
+
+        .menu {
+            order: -1;
+            margin-left: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            .menu__btn {
+                display: flex;
+            }
+
+            .menu__list {
+                display: none;
+            }
+        }
+    }
+}
+
+@include breakpoint($mobile-bp) {
+    .section-separator {
+        .section-separator__item {
+            max-width: none;
+        }
+    }
+
+    .header__inner {
+        .header__logo {
+            width: 106px;
+        }
+
+        .urser-actions-list {
+            gap: 0 15px;
+            font-size: 10px;
+
+            .urser-actions__link-sign-in {
+                p {
+                    display: none;
+                }
+
+                img {
+                    display: flex;
+                }
+            }
+
+            .urser-actions__link-started {
+                padding: 4px 10px;
+            }
+        }
     }
 }
