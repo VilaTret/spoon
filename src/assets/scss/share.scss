@@ -85,3 +85,27 @@ body {
         color: #999;
     }
 }
+
+@include breakpoint($tablet-bp) {
+    .section-separator {
+        .section-separator__item {
+            max-width: 768px;
+        }
+    }
+}
+
+@include breakpoint($small-tablet-bp) {
+    .section-separator {
+        .section-separator__item {
+            max-width: 640px;
+        }
+    }
+}
+
+@include breakpoint($mobile-bp) {
+    .section-separator {
+        .section-separator__item {
+            max-width: none;
+        }
+    }
+}
