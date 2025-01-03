@@ -360,9 +360,9 @@
             }
 
             @include breakpoint($small-tablet-bp) {
-                flex-wrap: wrap;
+                flex-direction: column;
                 gap: 50px 0;
-                justify-content: center;
+                align-items: center;
             }
 
             @include breakpoint($mobile-bp) {
@@ -722,7 +722,7 @@
         }
 
         .promoting__list {
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 10px 0;
 
             .promoting__item {
