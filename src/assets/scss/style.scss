@@ -255,6 +255,22 @@
     gap: 6px 0;
     padding: 115px 205px;
 
+    @include breakpoint($tablet-bp) {
+        padding: 115px 45px;
+    }
+
+    @include breakpoint($small-tablet-bp) {
+        padding: 95px 20px;
+    }
+
+    @include breakpoint($large-mobile-bp) {
+        padding: 85px 20px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        padding: 75px 10px;
+    }
+
     a {
         color: #5ab963;
     }
@@ -262,6 +278,10 @@
     .about__promo-title {
         text-align: center;
         padding: 0 58.25px 0 17.25px;
+
+        @include breakpoint($small-tablet-bp) {
+            padding: 0;
+        }
     }
 
     .about__link {
@@ -522,7 +542,7 @@
     }
 }
 
-@include breakpoint($big-mobile-bp) {
+@include breakpoint($large-mobile-bp) {
     .top__inner {
         padding: 90px 0;
 
