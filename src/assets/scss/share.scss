@@ -6,6 +6,10 @@ body {
     font-weight: 400;
     font-size: 24px;
     line-height: 1.5;
+
+    @include breakpoint($large-mobile-bp) {
+        font-size: 16px;
+    }
 }
 
 .d-n {
@@ -63,6 +67,18 @@ body {
         height: 100%;
         margin: 0 auto;
         background-color: #e6e6e6;
+
+        @include breakpoint($tablet-bp) {
+            max-width: 768px;
+        }
+
+        @include breakpoint($small-tablet-bp) {
+            max-width: 640px;
+        }
+
+        @include breakpoint($mobile-bp) {
+            max-width: none;
+        }
     }
 }
 
@@ -83,35 +99,5 @@ body {
     .promo-title__details {
         font-weight: 100;
         color: #999;
-    }
-}
-
-@include breakpoint($tablet-bp) {
-    .section-separator {
-        .section-separator__item {
-            max-width: 768px;
-        }
-    }
-}
-
-@include breakpoint($small-tablet-bp) {
-    .section-separator {
-        .section-separator__item {
-            max-width: 640px;
-        }
-    }
-}
-
-@include breakpoint($large-mobile-bp) {
-    body {
-        font-size: 16px;
-    }
-}
-
-@include breakpoint($mobile-bp) {
-    .section-separator {
-        .section-separator__item {
-            max-width: none;
-        }
     }
 }
