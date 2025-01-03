@@ -218,10 +218,6 @@
     margin: 0 auto;
     padding: 0 30px;
 
-    @include breakpoint($small-tablet-bp) {
-        padding: 0 10px;
-    }
-
     .main-swiper {
         background-color: #ddd;
 
@@ -250,6 +246,10 @@
             }
         }
     }
+
+    @include breakpoint($small-tablet-bp) {
+        padding: 0 10px;
+    }
 }
 
 .about__inner {
@@ -258,22 +258,6 @@
     align-items: center;
     gap: 6px 0;
     padding: 115px 205px;
-
-    @include breakpoint($tablet-bp) {
-        padding: 115px 45px;
-    }
-
-    @include breakpoint($small-tablet-bp) {
-        padding: 95px 20px;
-    }
-
-    @include breakpoint($large-mobile-bp) {
-        padding: 85px 20px;
-    }
-
-    @include breakpoint($mobile-bp) {
-        padding: 75px 10px;
-    }
 
     a {
         color: #5ab963;
@@ -293,6 +277,22 @@
         font-size: 11px;
         line-height: 1.63636;
         text-transform: uppercase;
+    }
+
+    @include breakpoint($tablet-bp) {
+        padding: 115px 45px;
+    }
+
+    @include breakpoint($small-tablet-bp) {
+        padding: 95px 20px;
+    }
+
+    @include breakpoint($large-mobile-bp) {
+        padding: 85px 20px;
+    }
+
+    @include breakpoint($mobile-bp) {
+        padding: 75px 10px;
     }
 }
 
@@ -316,6 +316,16 @@
             .main-blog__image {
                 width: 470px;
                 height: 330px;
+
+                @include breakpoint($tablet-bp) {
+                    width: 387px;
+                    height: 316px;
+                }
+
+                @include breakpoint($small-tablet-bp) {
+                    width: 470px;
+                    height: auto;
+                }
             }
 
             .main-blog__content {
@@ -329,7 +339,34 @@
                     font-size: 14px;
                     line-height: 1.71429;
                     color: #999;
+
+                    @include breakpoint($large-mobile-bp) {
+                        font-size: 12px;
+                        line-height: 1.5;
+                    }
                 }
+
+                @include breakpoint($small-tablet-bp) {
+                    padding: 0;
+                }
+
+                @include breakpoint($large-mobile-bp) {
+                    gap: 15px;
+                }
+            }
+
+            @include breakpoint($tablet-bp) {
+                gap: 0 50px;
+            }
+
+            @include breakpoint($small-tablet-bp) {
+                flex-wrap: wrap;
+                gap: 50px 0;
+                justify-content: center;
+            }
+
+            @include breakpoint($mobile-bp) {
+                gap: 30px 0;
             }
         }
 
@@ -338,7 +375,23 @@
 
             .main-blog__content {
                 order: -1;
+
+                @include breakpoint($small-tablet-bp) {
+                    order: 0;
+                }
             }
+
+            @include breakpoint($tablet-bp) {
+                margin-left: 0;
+            }
+        }
+
+        @include breakpoint($small-tablet-bp) {
+            gap: 60px 0;
+        }
+
+        @include breakpoint($mobile-bp) {
+            gap: 40px 0;
         }
     }
 
@@ -353,6 +406,7 @@
             font-weight: 700;
             font-size: 16px;
             line-height: 1.5;
+            text-align: center;
         }
 
         .main-blog-premium-link {
@@ -360,6 +414,31 @@
             font-size: 11px;
             line-height: 1.63636;
             text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    @include breakpoint($small-tablet-bp) {
+        padding: 100px 0;
+
+        .main-blog__premium {
+            margin-top: 80px;
+        }
+    }
+
+    @include breakpoint($large-mobile-bp) {
+        padding: 90px 0;
+
+        .main-blog__premium {
+            margin-top: 70px;
+        }
+    }
+
+    @include breakpoint($mobile-bp) {
+        padding: 80px 0;
+
+        .main-blog__premium {
+            margin-top: 60px;
         }
     }
 }
