@@ -538,12 +538,28 @@
                 margin-top: 15px;
                 color: #666;
             }
+
+            @include breakpoint($large-mobile-bp) {
+                flex-basis: auto;
+            }
         }
 
         .footer__nav {
             flex-basis: 585px;
             display: flex;
-            gap: 0 50px;
+            gap: 0 10px;
+
+            .footer__services {
+                flex-basis: 95px;
+            }
+
+            .footer__info {
+                flex-basis: 90px;
+            }
+
+            .footer__legal {
+                flex-basis: 172px;
+            }
 
             .footer__services,
             .footer__info,
@@ -551,12 +567,38 @@
                 display: flex;
                 flex-direction: column;
                 gap: 25px 0;
+
+                @include breakpoint($large-mobile-bp) {
+                    align-items: center;
+                }
             }
 
             .footer__social {
                 display: flex;
                 gap: 0 18px;
+
+                .footer__social-item {
+                    width: 12px;
+                }
             }
+
+            @include breakpoint($large-mobile-bp) {
+                flex-basis: auto;
+            }
+        }
+
+        @include breakpoint($small-tablet-bp) {
+            padding: 100px 0 130px 0;
+        }
+
+        @include breakpoint($large-mobile-bp) {
+            padding: 90px 20px 120px 20px;
+            flex-direction: column;
+            gap: 40px 0;
+        }
+
+        @include breakpoint($mobile-bp) {
+            padding: 80px 20px 110px 20px;
         }
     }
 }
